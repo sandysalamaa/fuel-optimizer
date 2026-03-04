@@ -1,3 +1,8 @@
+
+#----------------------------------------------------------------------------
+#Here we fetch the route from OpenRouteService and decode the geometry.
+#----------------------------------------------------------------------------
+
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .services.ors_service import (
@@ -39,6 +44,11 @@ def route_test(request):
 
 @api_view(['POST'])
 def fuel_route(request):
+    #----------------------------------------------------------------------------
+    # The API geocodes the input cities, fetches the route once, decodes the route geometry, 
+    # samples points along the route, finds nearby fuel stations from the database,
+    # selects the cheapest option, and calculates the total fuel cost.
+    #----------------------------------------------------------------------------
 
     try:
         start_text = request.data.get("start")

@@ -1,3 +1,7 @@
+#----------------------------------------------------------------------------
+# Calculates distances using the Haversine formula to find stations near the route.
+#----------------------------------------------------------------------------
+
 import math
 
 def haversine(lat1, lon1, lat2, lon2):

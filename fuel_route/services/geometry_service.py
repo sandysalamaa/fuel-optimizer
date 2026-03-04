@@ -1,3 +1,7 @@
+#----------------------------------------------------------------------------
+# Decodes the polyline geometry returned by the routing API.
+#----------------------------------------------------------------------------
+
 import polyline
 
 def decode_geometry(encoded_geometry):

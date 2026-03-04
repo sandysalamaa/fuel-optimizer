@@ -1,3 +1,7 @@
+#----------------------------------------------------------------------------
+# Handles geocoding and routing using OpenRouteService.
+#----------------------------------------------------------------------------
+
 import requests
 from django.conf import settings
 
